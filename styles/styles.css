@@ -1,0 +1,235 @@
+/* ========================================
+IMPORTED FONTS
+======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* ====================================
+CARDS
+==================================== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.card-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  min-height: 500px;
+  max-width: 800px;
+  padding: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.container-bg {
+  background-color: #000000aa;
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "title" "subject" "desc";
+  grid-template-rows: 100px 1fr 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+}
+
+.card-title {
+  grid-area: title;
+  padding: 0 0.5rem;
+  transform: translateZ(60px);
+}
+
+.desc {
+  align-self: flex-end;
+  grid-area: desc;
+  padding: 0.25rem;
+  transform: translateZ(40px);
+}
+
+.card img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.subject-ring {
+  background-color: #00000055;
+  border: 3px solid #ffffff55;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff55;
+  grid-area: subject;
+  transform: translateZ(30px);
+}
+
+.subject {
+  border-radius: 50%;
+  grid-area: subject;
+  transform: translateZ(100px);
+}
+
+.subject-bg {
+  backdrop-filter: blur(5px) grayscale(0.5);
+  background-image: repeating-linear-gradient(#00000055, #00000055 3px, transparent 3px, transparent 6px);
+  border-radius: 50%;
+  filter: blur(1px);
+  grid-area: subject;
+  transform: translateZ(60px);
+}
+
+@font-face {
+  font-family: "Steelfish";
+  src: url("../assets/fonts/steelfish.ttf");
+}
+/* ========================================
+SCREEN SIZES
+======================================== */
+/* ====================================
+Layout
+==================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.page-content {
+  align-items: center;
+  background-image: linear-gradient(110deg, transparent 50%, #ffffff33 50.1%);
+  color: #ffffff00;
+  display: flex;
+  justify-content: center;
+  overflow: overlay;
+  position: absolute;
+  top: 0;
+  transition: 0.4s color;
+  perspective: 2000px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page-content:hover {
+  color: #ffffff55;
+}
+
+.not-found {
+  backdrop-filter: blur(10px);
+  background-color: #00000055;
+  border-radius: 0.25rem;
+  margin: 1rem auto 0;
+  max-width: 800px;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* ====================================
+Typography
+==================================== */
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-family: "Steelfish", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  color: #ccc;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ====================================
+TESTING TEXT
+==================================== */
+.post-box {
+  padding: 1rem;
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.post-box h1,
+.post-box h2,
+.post-box h5 {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.post-box h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.post-box h4 {
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.post-preview {
+  backdrop-filter: blur(10px);
+  background-color: #00000035;
+  border: 1px solid white;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.post-preview p:last-child {
+  margin-bottom: 0;
+}
+
+.post-preview-title {
+  color: #00b3ff;
+  transition: 0.2s color;
+}
+
+.post-preview-title:hover {
+  color: #0086c0;
+}
+
+/* ========================================
+IMPORTED FONTS
+======================================== */
+@font-face {
+  font-family: "Steelfish";
+  src: url("../assets/fonts/steelfish.ttf");
+}
+/* ========================================
+SCREEN SIZES
+======================================== */
+
+/*# sourceMappingURL=styles.css.map */

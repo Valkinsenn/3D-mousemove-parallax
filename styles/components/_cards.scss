@@ -1,0 +1,93 @@
+/* ====================================
+CARDS
+==================================== */
+
+.card-container {
+  //   backdrop-filter: blur(10px);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  min-height: 500px;
+  max-width: 800px;
+  //   overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  //   transform: rotateY(-25deg);
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.container-bg {
+  background-color: #000000aa;
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "subject"
+    "desc";
+  grid-template-rows: 100px 1fr 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+}
+
+.card-title {
+  grid-area: title;
+  padding: 0 0.5rem;
+  transform: translateZ(60px);
+}
+
+.desc {
+  align-self: flex-end;
+  grid-area: desc;
+  padding: 0.25rem;
+  transform: translateZ(40px);
+}
+
+.card img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  //   opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.subject-ring {
+  background-color: #00000055;
+  border: 3px solid #ffffff55;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff55;
+  grid-area: subject;
+  transform: translateZ(30px);
+}
+
+.subject {
+  border-radius: 50%;
+  grid-area: subject;
+  transform: translateZ(100px);
+}
+
+.subject-bg {
+  backdrop-filter: blur(5px) grayscale(0.5);
+  background-image: repeating-linear-gradient(
+    #00000055,
+    #00000055 3px,
+    transparent 3px,
+    transparent 6px
+  );
+  //   background-color: #00000055;
+  border-radius: 50%;
+  filter: blur(1px);
+  grid-area: subject;
+  transform: translateZ(60px);
+}

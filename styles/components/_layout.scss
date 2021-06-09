@@ -1,0 +1,46 @@
+@use '../abstracts/' as a;
+
+/* ====================================
+Layout
+==================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.page-content {
+  align-items: center;
+  background-image: linear-gradient(110deg, transparent 50%, #ffffff33 50.1%);
+  color: #ffffff00;
+  display: flex;
+  justify-content: center;
+  overflow: overlay;
+  // padding-top: 5rem;
+  position: absolute;
+  top: 0;
+  transition: 0.4s color;
+  perspective: 2000px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page-content:hover {
+  color: #ffffff55;
+  // overflow: overlay;
+}
+
+.not-found {
+  backdrop-filter: blur(10px);
+  background-color: #00000055;
+  border-radius: 0.25rem;
+  margin: 1rem auto 0;
+  max-width: 800px;
+  padding: 1rem;
+  width: 100%;
+}
